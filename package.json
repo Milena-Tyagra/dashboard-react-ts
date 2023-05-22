@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "serve": "json-server --watch src/databases/db.json --port 5000"
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
