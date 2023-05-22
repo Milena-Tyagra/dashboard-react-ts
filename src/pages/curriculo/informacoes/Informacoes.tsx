@@ -47,7 +47,10 @@ const Informacoes: React.FC = () => {
       {isOpenedModal && (
         <LidarComInformações
           info={info}
-          aoFechar={() => setIsOpenModal(false)}
+          aoFechar={() => {
+            setIsOpenModal(false)
+            getInfo()
+          }}
         />
       )}
       {info.foto !== "" && (
