@@ -10,15 +10,12 @@ export interface Projeto {
 }
 
 export async function criarProjeto(projeto: Projeto) {
-  const response = await instanciaAxios.post<Projeto>(
-    "/Projetos/",
-    projeto
-  )
+  const response = await instanciaAxios.post<Projeto>("/Projetos/", projeto)
   return response.data
 }
 
 export async function listarProjetos() {
-  const response = await instanciaAxios.get<Projeto>("/projetos/")
+  const response = await instanciaAxios.get<Projeto[]>("/projetos/")
   return response.data
 }
 

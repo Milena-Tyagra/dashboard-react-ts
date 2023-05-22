@@ -16,7 +16,7 @@ export async function criarExperiencia(experiencia: Experiencia) {
 }
 
 export async function listarExperiencia() {
-  const response = await instanciaAxios.get<Experiencia>("/experiencias/")
+  const response = await instanciaAxios.get<Experiencia[]>("/experiencias/")
   return response.data
 }
 

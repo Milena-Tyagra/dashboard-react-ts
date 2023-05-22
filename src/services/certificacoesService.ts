@@ -15,7 +15,7 @@ export async function criarCertificacao(certification: Certificacao) {
 }
 
 export async function listarCertificacoes() {
-  const response = await instanciaAxios.get<Certificacao>("/certificacoes/")
+  const response = await instanciaAxios.get<Certificacao[]>("/certificacoes/")
   return response.data
 }
 
