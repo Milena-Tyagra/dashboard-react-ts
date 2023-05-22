@@ -1,5 +1,8 @@
 import React from "react"
-import { LoginData, login as loginService } from "../../services/autenticacaoService"
+import {
+  LoginData,
+  login as loginService,
+} from "../../services/autenticacaoService"
 import { useAuth } from "../../context/AuthContext"
 
 import { useNavigate } from "react-router-dom"
@@ -61,11 +64,7 @@ const Login = () => {
               errors={errors.senha}
               touched={touched.senha}
             />
-            <Botao
-              tipo="submit"
-            >
-              Entrar
-            </Botao>
+            <Botao tipo="submit">Entrar</Botao>
           </div>
         )}
       </Form>

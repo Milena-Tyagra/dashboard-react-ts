@@ -16,7 +16,7 @@ const Select: React.FC<SelectProps> = ({
   options,
   errors,
   touched,
-  multiple = false
+  multiple = false,
 }) => {
   return (
     <Input

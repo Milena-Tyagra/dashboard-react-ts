@@ -29,8 +29,8 @@ export const AuthProvider: React.FC = ({ children }) => {
   }, [])
 
   const login = (usuarioLogado: Usuario) => {
-    setUsuario(usuarioLogado);
-    setAutenticado(true);
+    setUsuario(usuarioLogado)
+    setAutenticado(true)
     localStorage.setItem("usuario", JSON.stringify(usuarioLogado))
   }
 

@@ -16,7 +16,7 @@ import Botao from "../../../components/common/botao"
 import Carregamento from "../../../components/layout/carregamento"
 
 const ListaCertificacoes = () => {
-  const [certificacoes, setCertificacoes] = useState<Certificacao[]>([])
+  const [certificacoes, setCertificacoes] = useState<Certificacao[]>()
   const [carregando, setCarregando] = useState(true)
   const [modalAberto, setModalAberto] = useState(false)
   const [emEdicao, setEmEdicao] = useState(false)

@@ -6,10 +6,7 @@ import Informativo from "../../components/common/informativo"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
 import { Pie } from "react-chartjs-2"
 
-import {
-  Projeto,
-  listarProjetos,
-} from "../../services/projetosService"
+import { Projeto, listarProjetos } from "../../services/projetosService"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -20,13 +17,11 @@ const Home: React.FC = () => {
     buscaProjetos()
   }, [])
 
-
   const buscaProjetos = async () => {
     setCarregando(true)
     try {
       const data = await listarProjetos()
       formataGraficos(data)
-      console.log(data)
     } catch (err) {
       console.log(err)
       alert("Ocorreu um erro, tente novamente")
@@ -79,7 +74,7 @@ const Home: React.FC = () => {
   return (
     <main>
       <Titulo>Bem vindo ao nosso site</Titulo>
-      <Informativo >
+      <Informativo>
         <p>Tecnologias</p>
         <Pie data={data} />
       </Informativo>

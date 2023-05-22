@@ -11,14 +11,14 @@ const Textarea: React.FC<TextareaProps> = ({
   touched,
 }) => {
   return (
-      <Input
-        as="textarea"
-        label={label}
-        name={name}
-        errors={errors}
-        touched={touched}
-        className={styles.textarea}
-      />
+    <Input
+      as="textarea"
+      label={label}
+      name={name}
+      errors={errors}
+      touched={touched}
+      className={styles.textarea}
+    />
   )
 }
 

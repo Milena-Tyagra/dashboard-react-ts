@@ -35,7 +35,6 @@ const LidarComInformacoes: React.FC<LidarComInformacoesProps> = ({
   ) => {
     try {
       await updateInformacoes(values)
-      console.log(values)
       resetForm()
       aoFechar()
       alert("Formulário enviado com sucesso")

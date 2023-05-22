@@ -6,12 +6,8 @@ interface InformativoProps {
   children: React.ReactNode
 }
 
-const Informativo: React.FC<InformativoProps> = ({children}) => {
-  return (
-    <div className={styles.info}>
-      {children}
-    </div>
-  )
+const Informativo: React.FC<InformativoProps> = ({ children }) => {
+  return <div className={styles.info}>{children}</div>
 }
 
 export default Informativo

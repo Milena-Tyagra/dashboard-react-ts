@@ -1,4 +1,4 @@
-import  { Usuario, buscarUsuarioPeloEmail } from "./usuariosService"
+import { Usuario, buscarUsuarioPeloEmail } from "./usuariosService"
 
 export interface LoginData {
   email: string

@@ -25,10 +25,6 @@ const Informacoes: React.FC = () => {
     getInfo()
   }, [])
 
-  useEffect(() => {
-    console.log(carregando)
-  }, [carregando])
-
   const getInfo = async () => {
     setCarregando(true)
     try {
