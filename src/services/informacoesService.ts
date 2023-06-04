@@ -10,13 +10,13 @@ export interface Informacoes {
 
 export async function updateInformacoes(informacoes: Informacoes) {
   const response = await instanciaAxios.put<Informacoes>(
-    "/informacoes/1",
+    "/informacoes",
     informacoes
   )
   return response.data
 }
 
 export async function getInformacoes() {
-  const response = await instanciaAxios.get<Informacoes>("/informacoes/1")
+  const response = await instanciaAxios.get<Informacoes>("/informacoes")
   return response.data
 }
