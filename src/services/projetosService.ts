@@ -10,18 +10,18 @@ export interface Projeto {
 }
 
 export async function criarProjeto(projeto: Projeto) {
-  const response = await instanciaAxios.post<Projeto>("/Projetos/", projeto)
+  const response = await instanciaAxios.post<Projeto>("/portfolio/", projeto)
   return response.data
 }
 
 export async function listarProjetos() {
-  const response = await instanciaAxios.get<Projeto[]>("/projetos/")
+  const response = await instanciaAxios.get<Projeto[]>("/portfolio/")
   return response.data
 }
 
 export async function atualizarProjeto(projeto: Projeto) {
   const response = await instanciaAxios.put<Projeto>(
-    `/Projetos/${projeto.id}`,
+    `/portfolio/${projeto.id}`,
     projeto
   )
   return response.data
@@ -29,7 +29,7 @@ export async function atualizarProjeto(projeto: Projeto) {
 
 export async function deletarProjeto(projeto: Projeto) {
   const response = await instanciaAxios.delete<Projeto>(
-    `/Projetos/${projeto.id}`
+    `/portfolio/${projeto.id}`
   )
   return response.data
 }
