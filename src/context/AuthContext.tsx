@@ -21,7 +21,7 @@ export const AuthProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     const storedUser = localStorage.getItem("usuario")
-    if (storedUser) {
+    if (storedUser && storedUser !== "undefined") {
       setUsuario(JSON.parse(storedUser))
       setAutenticado(true)
     }
