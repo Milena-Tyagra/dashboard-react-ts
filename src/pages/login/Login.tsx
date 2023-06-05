@@ -1,6 +1,6 @@
 import React from "react"
 import {
-  LoginData,
+  Usuario,
   login as loginService,
 } from "../../services/autenticacaoService"
 import { useAuth } from "../../context/AuthContext"
@@ -15,7 +15,7 @@ import Form from "../../components/common/forms/form"
 import Botao from "../../components/common/botao"
 import Titulo from "../../components/common/titulo"
 
-const initialValues: LoginData = {
+const initialValues: Usuario = {
   email: "",
   senha: "",
 }
@@ -30,7 +30,7 @@ const Login = () => {
   const navigate = useNavigate()
   const { login } = useAuth()
 
-  const onSubmit = async (values: LoginData) => {
+  const onSubmit = async (values: Usuario) => {
     try {
       const user = await loginService(values)
       login(user)
