@@ -1,7 +1,9 @@
 import axios from "axios"
 
+const apiUrl = "https://site-pessoal-api-cuhk.onrender.com/api"
+// const apiUrl = import.meta.env.VITE_API_URL
 const instanciaAxios = axios.create({
-  baseURL: "https://json-server-dashboard-lhjx.onrender.com",
+  baseURL: apiUrl,
 })
 
 export default instanciaAxios
